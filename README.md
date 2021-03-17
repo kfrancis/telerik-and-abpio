@@ -1,5 +1,3 @@
-![files we need to modify/add](article_img.png)
-
 # How to Integrate the Telerik UI for ASP.NET Core (Kendo) components with the ABP MVC UI?
 
 ## Introduction
