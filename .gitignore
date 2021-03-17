@@ -260,3 +260,5 @@ src/TelerikComponents.IdentityServer/Logs/*
 src/TelerikComponents.HttpApi.Host/Logs/*
 src/TelerikComponents.HttpApi.HostWithIds/Logs/*
 src/TelerikComponents.DbMigrator/Logs/*
+
+**/wwwroot/lib
