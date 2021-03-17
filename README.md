@@ -45,7 +45,7 @@ abp new TelerikComponents --ui mvc --database-provider ef
 * We need to install the `Telerik.UI.for.AspNet.Core` NuGet package to our web project (`*.Web`). We need to choose the Telerik feed package source to see the package.
 * If you're using the trial, install `Telerik.UI.for.AspNet.Core.Trial` package via NuGet.
 
-![files we need to modify/add](https://imgur.com/qNbgrHC.png)
+![files we need to modify/add](screen1.png)
 
 * In package.json, add the kendo script component as a dependency. This will get the scripts in your `node_modules` directory. A note, the npm package from Telerik needs to be transpiled to be able to be used so we're basically following their npm+webpack documentation [here](https://docs.telerik.com/aspnet-core/installation/npm) with a few adjustments for abp.io setup:
 ```json
@@ -148,7 +148,7 @@ module.exports = {
 
 * In the `TelerikComponents.Web` project, under `/Bundling`, create a new directory we'll call `Kendo`- i.e. `/Bundling/Kendo`
 
-![Adding in components/bundles for abp](https://imgur.com/PhDnzbL.png)
+![Adding in components/bundles for abp](screen2.png)
 
 * In `/Bundling/Kendo`, create the class file `KendoScriptContributer.cs` with the following content:
 ```csharp
@@ -259,4 +259,4 @@ If we've done everything right, then we should now be able to use the components
 ```
 
 # Done!
-![kendo wee](https://imgur.com/jiBEfOI.gif)
+![kendo wee](numkendo.gif)
