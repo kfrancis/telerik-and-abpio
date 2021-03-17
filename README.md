@@ -52,16 +52,16 @@ abp new TelerikComponents --ui mvc --database-provider ef
 * In package.json, add the kendo script component as a dependency. This will get the scripts in your `node_modules` directory. A note, the npm package from Telerik needs to be transpiled to be able to be used so we're basically following their npm+webpack documentation [here](https://docs.telerik.com/aspnet-core/installation/npm) with a few adjustments for abp.io setup:
 ```json
 {
-	{
-      "version": "1.0.0",
-      "name": "my-app",
-      "private": true,
-      "main": "main.js",
-      "devDependencies": {
+    {
+        "version": "1.0.0",
+        "name": "my-app",
+        "private": true,
+        "main": "main.js",
+        "devDependencies": {
         "webpack": "^5.26.3",
         "webpack-cli": "^4.5.0"
-      },
-      "dependencies": {
+        },
+        "dependencies": {
         "@volo/abp.aspnetcore.mvc.ui.theme.lepton": "^4.2.2",
         "@volo/account": "^4.2.2",
         "@volo/audit-logging": "^4.2.2",
@@ -72,10 +72,10 @@ abp new TelerikComponents --ui mvc --database-provider ef
         "css-loader": "^5.1.3",
         "expose-loader": "^2.0.0",
         "style-loader": "^2.0.0"
-      },
-      "scripts": {
+        },
+        "scripts": {
         "build": "webpack"
-      }
+        }
     }
 }
 ```
