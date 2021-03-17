@@ -1,0 +1,109 @@
+/*!
+ * Copyright 2021 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+// Textarea
+.k-textarea {
+    .fill(
+        @textarea-text,
+        @textarea-bg,
+        @textarea-border
+    );
+
+    // Placeholder
+    &::placeholder,
+    > .k-input::placeholder {
+        color: @textarea-placeholder-text;
+        opacity: @textarea-placeholder-opacity;
+        user-select: none;
+    }
+
+    // Selection
+    &::selection,
+    .k-input::selection {
+        .fill (
+            @text: @textarea-selected-text,
+            @bg: @textarea-selected-bg
+        );
+    }
+
+    // Focused
+    &:focus,
+    &:focus-within,
+    &.k-state-focus,
+    &.k-state-focused {
+        .fill (
+            @textarea-focused-text,
+            @textarea-focused-bg,
+            @textarea-focused-border
+        );
+        .box-shadow( @textarea-focused-shadow );
+    }
+
+    // Hovered
+    &:hover,
+    &.k-state-hover {
+        .fill(
+            @textarea-hovered-text,
+            @textarea-hovered-bg,
+            @textarea-hovered-border
+        );
+    }
+
+    // Invalid
+    &.k-invalid,
+    &.k-state-invalid,
+    &.ng-invalid.ng-touched,
+    &.ng-invalid.ng-dirty {
+        border-color: @textarea-invalid-border;
+
+        &:focus,
+        &:focus-within,
+        &.k-state-focus,
+        &.k-state-focused {
+            .box-shadow(@textarea-invalid-shadow);
+        }
+    }
+
+    // Disabled
+    &:disabled,
+    &[disabled],
+    &.k-state-disabled {
+
+        &::selection {
+            color: @textarea-text;
+            background-color: transparent;
+        }
+    }
+}
+
+// Textarea Floating label
+.k-floating-label-container.k-textarea-container,
+.k-textbox-container.k-textarea-container {
+
+    > .k-label {
+        .fill( @text: @textarea-text );
+    }
+}
+
+// TODO: Remove once we drop IE support
+.k-ie {
+    .k-textarea {
+        :-ms-input-placeholder,
+        &:-ms-input-placeholder {
+            color: @textarea-placeholder-text;
+        }
+
+    }
+}
