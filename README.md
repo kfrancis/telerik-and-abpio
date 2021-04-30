@@ -152,7 +152,7 @@ module.exports = {
 
 * In `/Bundling/Kendo`, create the class file `KendoScriptContributer.cs` with the following content:
 ```csharp
-namespace TelerikComponets.Web.Bundling
+namespace TelerikComponents.Web.Bundling
 {
     [DependsOn(
         typeof(JQueryScriptContributor)
